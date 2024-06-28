@@ -1,0 +1,24 @@
+# dev/build outputs
+dist
+.output
+.data
+.cache
+
+# dependencies
+node_modules
+target
+bun.lockb
+yarn.lock
+
+# logs
+logs
+*.log
+
+# Misc
+.idea
+.fleet
+.DS_Store
+
+# Local env files
+.env.*
+!.env.example

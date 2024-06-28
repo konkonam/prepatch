@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext"],
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleDetection": "force",
+		"moduleResolution": "Bundler",
+		"strict": true,
+		"incremental": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+
+		"types": ["./src/types/index.d.ts"],
+
+		"paths": {
+			".": [ "./src/index.ts" ],
+		},
+	},
+
+	"include": [
+		"./src/index.ts",
+		"./src/index.d.ts",
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+	],
+}

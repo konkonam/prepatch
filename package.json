@@ -1,0 +1,30 @@
+{
+    "name": "prepatch",
+    "version": "0.0.1",
+    "type": "module",
+    "license": "MIT",
+    "author": "konkonam <konkonam@gmail.com>",
+    "contributors": [ "freb97 <frederik@bussmann.io>" ],
+    "main": "./src/index.ts",
+
+    "scripts": {
+        "lint": "eslint ./src"
+    },
+
+    "exports": {
+        ".": "./src/index.ts"
+    },
+
+    "devDependencies": {
+        "@antfu/eslint-config": "latest"
+    },
+
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:konkonam/prepatch.git"
+    },
+
+    "bugs": {
+        "url": "https://github.com/konkonam/prepatch/issues"
+    }
+}
