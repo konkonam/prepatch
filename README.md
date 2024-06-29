@@ -1,6 +1,6 @@
 Dependency free micro framework for dependency injection
 
-- Inspired by [mitt](https://github.com/developit/mitt)
+Inspired by [mitt](https://github.com/developit/mitt)
 ```ts
 const contributors = [
     { name: 'konkonam', url: 'https://github.com/konkonam' },
@@ -19,18 +19,18 @@ npm install prepatch
 
 ### Usage
 ```ts
-import { usePath } from 'prepatch';
+import { usePrepatch } from 'prepatch';
 
-const { patch } = usePath();
+const { apply } = usePrepatch();
 
 // prepare and inject your dependencies
-const patcher = patch(({ prepatch }) => {
+const container = apply(({ patch }) => {
     const mitt = mitt()
 
     mitt.on('greet', console.log)
 
     return {
-        injectMitt: prepatch({
+        injectMitt: patch({
             mitt,
             audience: 'World',
         })
@@ -38,7 +38,7 @@ const patcher = patch(({ prepatch }) => {
 })
 
 // use your dependencies
-const emitter = patcher.injectMitt(({ mitt, audience }) => {
+const emitter = container.injectMitt(({ mitt, audience }) => {
     // write any logic you want in any style...
 
     const sayHello = () => mitt.emit('greet', `Hello ${audience}!`)
