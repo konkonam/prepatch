@@ -5,7 +5,7 @@ export type PatchContext<T, D extends Dependencies> = {
     dependencies: D
 }
 
-const usePrepatch = () => {
+export const usePrepatch = () => {
     const patch = <D extends Dependencies>(dependencies: D) => {
         return <T>(
             setup: (dependencies: D) => T,
@@ -23,5 +23,3 @@ const usePrepatch = () => {
         ) => setup({ patch })
     }
 }
-
-export default usePrepatch
