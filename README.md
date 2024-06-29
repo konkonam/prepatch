@@ -1,4 +1,4 @@
-Dependency free micro framework for dependency injection.
+Dependency free micro framework for dependency injection
 
 - Inspired by [mitt](https://github.com/developit/mitt)
 ```ts
