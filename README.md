@@ -8,6 +8,10 @@ const contributors = [
 ]
 ```
 
+### Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+
 ### Installation
 ```sh
 npm install prepatch
