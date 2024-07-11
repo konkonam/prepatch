@@ -19,23 +19,16 @@ npm install prepatch
 
 ### Usage
 ```ts
-import { usePrepatch } from 'prepatch';
+import prepatch from 'prepatch';
 
-const { apply } = usePrepatch();
+const mitt = mitt()
 
-// prepare and inject your dependencies
-const container = apply(({ patch }) => {
-    const mitt = mitt()
+mitt.on('greet', console.log)
 
-    mitt.on('greet', console.log)
-
-    return {
-        injectMitt: patch({
-            mitt,
-            audience: 'World',
-        })
-    }
-})
+const container = prepatch({
+    mitt,
+    audience: 'World',
+});
 
 // use your dependencies
 const emitter = container.injectMitt(({ mitt, audience }) => {
